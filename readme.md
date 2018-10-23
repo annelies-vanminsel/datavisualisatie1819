@@ -13,6 +13,11 @@ Deze repo is gemaakt in opdracht van het vak 'Datavisualisatie' voor de opleidin
 
 ## Assignment 5
 
+
+---
+## Hulp bij het opmaken van de readme:
+
+
 Paragraphs are separated
 by a blank line.
 
