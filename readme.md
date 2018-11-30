@@ -4,6 +4,11 @@ Datavisualisatie 2018-2019 - Annelies Van Minsel
 Deze repo is gemaakt in opdracht van het vak 'Datavisualisatie' voor de opleiding Multec.
 
 ## Assignment 1
+* Explanatory, Physical, 3D
+* Over de zwaarste aardbevingen 
+Bronnen:
+* Wereldkaart: https://www.freepik.com/free-vector/white-world-map_796237.htm#term=world%20map&page=1&position=13
+* Dataset: https://www.worlddata.info/natural-disasters.php#earthquakes 
 
 ## Assignment 2
 
