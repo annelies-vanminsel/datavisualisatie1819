@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ndbx formatVersion="21" type="file" uuid="a94ce7fd-640e-4ad3-9e6c-00a5250c0191">
-    <property name="canvasHeight" value="15000"/>
-    <property name="canvasWidth" value="1000"/>
+    <property name="canvasHeight" value="5000"/>
+    <property name="canvasWidth" value="15000"/>
     <property name="canvasX" value="0"/>
     <property name="canvasY" value="0"/>
     <node name="root" prototype="core.network" renderedChild="combine1">
         <node name="align1" position="4.00,8.00" prototype="corevector.align">
-            <port name="position" type="point" value="-400.00,7000.00"/>
+            <port name="position" type="point" value="-7000.00,0.00"/>
+            <port name="halign" type="string" value="left"/>
             <port name="valign" type="string" value="bottom"/>
         </node>
         <node name="align2" position="8.00,8.00" prototype="corevector.align">
-            <port name="position" type="point" value="-200.00,7000.00"/>
+            <port name="position" type="point" value="-7000.00,200.00"/>
+            <port name="halign" type="string" value="left"/>
             <port name="valign" type="string" value="bottom"/>
         </node>
         <node name="align3" position="12.00,8.00" prototype="corevector.align">
-            <port name="position" type="point" value="0.00,7000.00"/>
+            <port name="position" type="point" value="-7000.00,400.00"/>
+            <port name="halign" type="string" value="left"/>
             <port name="valign" type="string" value="bottom"/>
         </node>
         <node name="align4" position="16.00,8.00" prototype="corevector.align">
-            <port name="position" type="point" value="200.00,7000.00"/>
+            <port name="position" type="point" value="-7000.00,600.00"/>
+            <port name="halign" type="string" value="left"/>
+            <port name="valign" type="string" value="bottom"/>
         </node>
         <node name="colorize1" position="12.00,7.00" prototype="corevector.colorize">
             <port name="fill" type="color" value="#369a00ff"/>
@@ -75,14 +80,10 @@
         </node>
         <node name="textpath1" position="0.00,8.00" prototype="corevector.textpath">
             <port name="font_name" type="string" value="BebasNeue"/>
-            <port name="font_size" type="float" value="561.0"/>
-            <port name="position" type="point" value="-7.00,-7026.00"/>
+            <port name="font_size" type="float" value="720.0"/>
+            <port name="position" type="point" value="-6458.00,-365.00"/>
         </node>
         <conn input="textpath1.text" output="round1"/>
-        <conn input="rect1.height" output="round2"/>
-        <conn input="rect2.height" output="round3"/>
-        <conn input="rect3.height" output="round4"/>
-        <conn input="rect4.height" output="round5"/>
         <conn input="round1.value" output="lookupYear"/>
         <conn input="lookupVer.list" output="slice1"/>
         <conn input="round2.value" output="lookupVer"/>
@@ -109,5 +110,9 @@
         <conn input="filter_data1.value" output="frame1"/>
         <conn input="lookupYear.list" output="slice1"/>
         <conn input="slice1.list" output="filter_data1"/>
+        <conn input="rect1.width" output="round2"/>
+        <conn input="rect2.width" output="round3"/>
+        <conn input="rect3.width" output="round4"/>
+        <conn input="rect4.width" output="round5"/>
     </node>
 </ndbx>
