@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="21" type="file" uuid="a94ce7fd-640e-4ad3-9e6c-00a5250c0191">
+    <property name="canvasHeight" value="15000"/>
+    <property name="canvasWidth" value="1000"/>
+    <property name="canvasX" value="0"/>
+    <property name="canvasY" value="0"/>
+    <node name="root" prototype="core.network" renderedChild="combine1">
+        <node name="align1" position="4.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="-400.00,7000.00"/>
+            <port name="valign" type="string" value="bottom"/>
+        </node>
+        <node name="align2" position="8.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="-200.00,7000.00"/>
+            <port name="valign" type="string" value="bottom"/>
+        </node>
+        <node name="align3" position="12.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="0.00,7000.00"/>
+            <port name="valign" type="string" value="bottom"/>
+        </node>
+        <node name="align4" position="16.00,8.00" prototype="corevector.align">
+            <port name="position" type="point" value="200.00,7000.00"/>
+        </node>
+        <node name="colorize1" position="12.00,7.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#369a00ff"/>
+        </node>
+        <node name="colorize2" position="8.00,7.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#0025ffff"/>
+        </node>
+        <node name="colorize3" position="16.00,7.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#bb00ffff"/>
+        </node>
+        <node name="colorize4" position="4.00,7.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#ff0089ff"/>
+        </node>
+        <node name="combine1" position="7.00,12.00" prototype="list.combine"/>
+        <node name="filter_data1" position="4.00,-1.00" prototype="data.filter_data">
+            <port name="key" type="string" value="YEAR"/>
+        </node>
+        <node name="frame1" position="8.00,-2.00" prototype="core.frame"/>
+        <node name="import_csv1" position="4.00,-3.00" prototype="data.import_csv">
+            <port name="file" type="string" value="DS-SPECIES.txt"/>
+        </node>
+        <node name="lookupFungi" position="16.00,2.00" prototype="data.lookup">
+            <port name="key" type="string" value="FUNGI_PROTISTS"/>
+        </node>
+        <node name="lookupInver" position="8.00,2.00" prototype="data.lookup">
+            <port name="key" type="string" value="INVERTEBRATES"/>
+        </node>
+        <node name="lookupPlants" position="12.00,2.00" prototype="data.lookup">
+            <port name="key" type="string" value="PLANTS"/>
+        </node>
+        <node name="lookupVer" position="4.00,2.00" prototype="data.lookup">
+            <port name="key" type="string" value="VERTEBRATES"/>
+        </node>
+        <node name="lookupYear" position="0.00,2.00" prototype="data.lookup">
+            <port name="key" type="string" value="YEAR"/>
+        </node>
+        <node name="rect1" position="4.00,6.00" prototype="corevector.rect"/>
+        <node name="rect2" position="8.00,6.00" prototype="corevector.rect">
+            <port name="position" type="point" value="-374.00,5800.00"/>
+        </node>
+        <node name="rect3" position="12.00,6.00" prototype="corevector.rect">
+            <port name="position" type="point" value="-226.00,-2149.00"/>
+        </node>
+        <node name="rect4" position="16.00,6.00" prototype="corevector.rect">
+            <port name="position" type="point" value="0.00,-66.00"/>
+        </node>
+        <node name="round1" position="0.00,4.00" prototype="math.round"/>
+        <node name="round2" position="4.00,4.00" prototype="math.round"/>
+        <node name="round3" position="8.00,4.00" prototype="math.round"/>
+        <node name="round4" position="12.00,4.00" prototype="math.round"/>
+        <node name="round5" position="16.00,4.00" prototype="math.round"/>
+        <node name="slice1" position="4.00,0.00" prototype="list.slice">
+            <port name="size" type="int" value="1"/>
+        </node>
+        <node name="textpath1" position="0.00,6.00" prototype="corevector.textpath">
+            <port name="font_name" type="string" value="BebasNeue"/>
+            <port name="font_size" type="float" value="561.0"/>
+            <port name="position" type="point" value="-7.00,-7026.00"/>
+        </node>
+        <conn input="textpath1.text" output="round1"/>
+        <conn input="rect1.height" output="round2"/>
+        <conn input="rect2.height" output="round3"/>
+        <conn input="rect3.height" output="round4"/>
+        <conn input="rect4.height" output="round5"/>
+        <conn input="round1.value" output="lookupYear"/>
+        <conn input="lookupVer.list" output="slice1"/>
+        <conn input="round2.value" output="lookupVer"/>
+        <conn input="lookupInver.list" output="slice1"/>
+        <conn input="round3.value" output="lookupInver"/>
+        <conn input="round4.value" output="lookupPlants"/>
+        <conn input="lookupPlants.list" output="slice1"/>
+        <conn input="round5.value" output="lookupFungi"/>
+        <conn input="lookupFungi.list" output="slice1"/>
+        <conn input="combine1.list1" output="textpath1"/>
+        <conn input="combine1.list2" output="align1"/>
+        <conn input="combine1.list3" output="align2"/>
+        <conn input="combine1.list4" output="align3"/>
+        <conn input="colorize1.shape" output="rect3"/>
+        <conn input="align3.shape" output="colorize1"/>
+        <conn input="colorize2.shape" output="rect2"/>
+        <conn input="align2.shape" output="colorize2"/>
+        <conn input="colorize3.shape" output="rect4"/>
+        <conn input="align4.shape" output="colorize3"/>
+        <conn input="colorize4.shape" output="rect1"/>
+        <conn input="align1.shape" output="colorize4"/>
+        <conn input="filter_data1.data" output="import_csv1"/>
+        <conn input="combine1.list5" output="align4"/>
+        <conn input="filter_data1.value" output="frame1"/>
+        <conn input="lookupYear.list" output="slice1"/>
+        <conn input="slice1.list" output="filter_data1"/>
+    </node>
+</ndbx>
