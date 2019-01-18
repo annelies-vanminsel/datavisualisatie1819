@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+body{
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+h1{
+  font-size: 40px;
+}
+p{
+  font-size: 25px;
+}
+
+button{
+  font-size: 25px;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  border: none;
+  padding: 0.5% 1%;
+  border-radius: 50px;
+  color: white;
+}
+
+#sort{
+  background-color: #C33C54;
+}
+
+#combine{
+  background-color: #2292A4;
+}
