@@ -10,8 +10,10 @@ Deze repo is gemaakt in opdracht van het vak 'Datavisualisatie' voor de opleidin
 * **Appaerance:** / 
 * **Other:** 3D
 
-Ik heb de wikipedia pagina van vermiste vliegtuigen bezochtn hier heb ik de tien vliegtuigen uitgehaald met het meeste aantal mensen aan boord.
-Van deze vliegtuigen heb ik het startpunt en het eindpunt opgezocht. Deze heb ik op een gelasercutte plaat aangeduid. De routes worden in vogelvlucht aangeduid met een koord. Een groen koord betekent dat het vliegtuig een militair vliegtuig was. Een rood koord is een 'normaal' vliegtuig. De nagels die de start- en eindpunten aanduiden staan op verschillende hoogtes. Deze hoogtes staan voor het aantal mensen aan boord van het vliegtuig: 1mm = 10 mensen.
+Ik heb de wikipedia pagina van vermiste vliegtuigen bezocht en hier heb ik de tien vliegtuigen uitgehaald met het meeste aantal mensen aan boord.
+Van deze vliegtuigen heb ik het startpunt en het eindpunt opgezocht. Deze heb ik op een gelasercutte plaat aangeduid.    
+De routes worden in vogelvlucht aangeduid met een koord. Een groen koord betekent dat het vliegtuig militair was. Een rood koord staat voor een 'normaal' vliegtuig.    
+De nagels die de start- en eindpunten aanduiden staan op verschillende hoogtes. Deze hoogtes staan voor het aantal mensen aan boord van het vliegtuig: 1mm = 10 mensen.
 
 Bronnen:
 * Wereldkaart: https://www.freepik.com/free-vector/white-world-map_796237.htm#term=world%20map&page=1&position=13
@@ -40,11 +42,12 @@ Bronnen:
 * **Appaerance:** Static
 * **Other:** /
 
-Voor deze datavisualisatie heb ik gekozen voor 
+Om in het thema van 'missing' te blijven heb ik gekozen voor vermiste kinderen. Ik heb de vijf landen met het hoogste gemiddelde van vermiste kinderen per jaar op een lijst gezet. Al deze cijfers heb ik opgeteld, van het totaal aantal vermiste kinderen heb ik de procenten berekend. De grootte van het kind is 100%. De vlaggen zijn dus op hun procent gemaakt.  
+De moeder bevat de informatie in cijfers. Je kan het kind verwijderen van de moeder en zo zijn de cijfers zichtbaar, je kan het kind ook altijd weer bij zijn moeder zetten. 
 
 Bronnen:
 * Patroon: https://www.freepik.com/free-vector/children-drawings-pattern_768996.htm#term=children&page=1&position=4
-* Vormen: Zelf gemaakt in illustrator
+* Vormen Moeder & Kind: Zelf gemaakt in illustrator
 * Vlaggen: https://www.freepik.com/free-vector/flag-icon-set_838764.htm#term=uk%20flag&page=1&position=2
 * Dataset: https://globalmissingkids.org/awareness/missing-children-statistics/
 
@@ -56,7 +59,8 @@ Bronnen:
 * **Appaerance:** Linear
 * **Other:** Node-based
 
-Voor deze datavisualisatie heb ik gekozen voor 
+Ik heb gekozen om de evolutie van het aantal bedreigde soorten weer te geven. Van 1998 tot 2017 kan je een duidelijke stijging zien in het aantal bedreigde soorten.   
+De oorzaken van deze stijging mag je zelf bedenken. 
 
 Bronnen:
 * Dataset: https://www.statista.com/statistics/264841/biodiversity-animals-on-the-red-list/
