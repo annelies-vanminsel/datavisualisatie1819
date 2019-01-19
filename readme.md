@@ -68,15 +68,15 @@ Bronnen:
 * Dataset: https://www.statista.com/statistics/264841/biodiversity-animals-on-the-red-list/
 
 
-## Assignment 5
+## Assignment 5 - Voornamen (man, vrouw)
 
-* **Intend:** 
-* **Media:** 
-* **Appaerance:**  
-* **Other:** 
+* **Intend:** Explanatory
+* **Media:** /
+* **Appaerance:**  Video
+* **Other:** Nodebased
 
-uitleg vizzz
+Ik heb twee datasets (voornamen mannen én voornamen vrouwen) gecombineerd. Van beide files werden de 255 eerste rijen er uit gefilterd. Hier wou ik eerst een poster van maken, maar omdat er maar één poster mocht zijn, heb ik ervoor gekozen om een video van deze visualisatie te maken. 
 
 Bronnen:
-* Dataset: 
+* Dataset: https://data.gov.be/en/dataset/6e228316f05ad21b477eca3c566f6ab5c8db28e3 (Zowel mannen als vrouwen)
 
