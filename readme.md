@@ -28,7 +28,9 @@ Bronnen:
 * **Other:** D3
 
 Ik heb ervoor gekozen om een dataset met voornamen uit Brussel te gebruiken om een interactieve visualisatie maken. Ik heb een bubble chart gemaakt die je kan opsplitsen op basis van de beginletter van de voornaam.  
-De kleuren van de bubbles zijn gebasseerd op het aantal keer dat de naam voorkomt. De groottes zijn  hier ook op gebasseerd.
+De kleuren van de bubbles zijn gebasseerd op het aantal keer dat de naam voorkomt. De groottes zijn  hier ook op gebasseerd.  
+
+Het resultaat kunt u bewonderen op [de schoolserver](http://dtsl.ehb.be/annelies.van.minsel/public_html/DV/). Voor het beste resultaat raad ik aan om uit te zoomen tot 50%. (Hangt vooral van je schermgrootte af, maar op de meeste schermen geeft 50% een mooie overview van alle data.)
 
 Bronnen:
 * Bronnen voor het schrijven van de code zijn vermeld in 'bubbles.js'

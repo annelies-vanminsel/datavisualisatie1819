@@ -28,3 +28,15 @@ button{
 #combine{
   background-color: #2292A4;
 }
+
+#tooltip {
+  text-align: left;
+  padding: 2%;
+  font-size: 30px;
+  background-color: #C33C54;
+  border: 1px solid black;
+  width: auto;
+  opacity: 0;
+  color: white;
+  position: absolute;
+}

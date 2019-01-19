@@ -1,7 +1,8 @@
 /*
   * BRON: 
-  * https://www.youtube.com/watch?v=lPr60pexvEM
-  * https://www.youtube.com/watch?v=NTS7uXOxQeM
+  * https://www.youtube.com/watch?v=lPr60pexvEM (eerste bubble chart)
+  * https://www.youtube.com/watch?v=NTS7uXOxQeM (splitsen van bubble chart)
+  * https://codepen.io/EleftheriaBatsou/pen/VQxdVY (tekst hover)
 */
 (function() {
   var width = 2000, height = 1500;
@@ -15,7 +16,7 @@
   var forceX = d3.forceX(width/2).strength(0.05);
   var forceY = d3.forceY(height/2).strength(0.05);
   var forceCollide = d3.forceCollide(function(d){
-                        return radiusScale(d.aantal)+1;
+                        return radiusScale(d.aantal)+2;
                       });
   
   var sortX = d3.forceX(function(d) {
@@ -90,7 +91,25 @@
                         return "#00B295";
                       }
                       
-                    }).style("stroke", "black");
+                    }).style("stroke", "black")
+    //Add Event Listeners | mouseover
+        .on('mouseover', function(d) {
+          d3.select(this).style('fill', 'black'); 
+          console.log(d);
+          d3.select('#naam').text(d.voornaam);
+          d3.select('#aantal').text(d.aantal);
+          d3.select('#tooltip')
+            .style('left', (d.x + 500) + 'px')
+            .style('top', (d.y + 100) + 'px')
+            .style('display', 'block')
+            .style('opacity', 0.8)
+        })
+        //Add Event Listeners | mouseout
+        .on('mouseout', function(d) { 
+          d3.select(this).style('fill', d.color);
+          d3.select('#tooltip')
+            .style('display', 'none');
+        });;
     
     d3.select("#sort").on("click", function () {
         simulation.force("x", sortX).force("y", sortY)
