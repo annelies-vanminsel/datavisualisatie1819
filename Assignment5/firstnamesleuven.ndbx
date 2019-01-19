@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="21" type="file" uuid="1766f89e-398d-407b-b1d7-da543fdbe592">
+    <property name="canvasHeight" value="5000"/>
+    <property name="canvasWidth" value="5000"/>
+    <property name="canvasX" value="0"/>
+    <property name="canvasY" value="0"/>
+    <node name="root" prototype="core.network" renderedChild="combine1">
+        <node name="align1" position="2.00,5.00" prototype="corevector.align">
+            <port name="position" type="point" value="10.00,0.00"/>
+            <port name="halign" type="string" value="right"/>
+        </node>
+        <node name="align2" position="21.00,5.00" prototype="corevector.align">
+            <port name="position" type="point" value="10.00,0.00"/>
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="colorize1" position="20.00,8.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#00c4fcff"/>
+            <port name="stroke" type="color" value="#ffffffff"/>
+        </node>
+        <node name="colorize2" position="1.00,8.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#fc00c1ff"/>
+            <port name="stroke" type="color" value="#ffffffff"/>
+        </node>
+        <node name="combine1" position="11.00,14.00" prototype="list.combine"/>
+        <node name="compound1" position="1.00,7.00" prototype="corevector.compound"/>
+        <node name="compound2" position="20.00,7.00" prototype="corevector.compound"/>
+        <node name="count1" position="6.00,1.00" prototype="list.count"/>
+        <node name="count2" position="25.00,1.00" prototype="list.count"/>
+        <node name="divide1" position="6.00,5.00" prototype="math.divide">
+            <port name="value1" type="float" value="360.0"/>
+        </node>
+        <node name="divide2" position="25.00,5.00" prototype="math.divide">
+            <port name="value1" type="float" value="360.0"/>
+        </node>
+        <node name="ellipse1" position="13.00,1.00" prototype="corevector.ellipse">
+            <port name="width" type="float" value="2000.0"/>
+            <port name="height" type="float" value="2000.0"/>
+        </node>
+        <node name="ellipse2" position="32.00,1.00" prototype="corevector.ellipse">
+            <port name="width" type="float" value="2500.0"/>
+            <port name="height" type="float" value="2500.0"/>
+        </node>
+        <node name="import_csv1" position="2.00,-3.00" prototype="data.import_csv">
+            <port name="file" type="string" value="TA_BIRTHS_FEMALE_2008_2017.txt"/>
+        </node>
+        <node name="import_csv2" position="21.00,-3.00" prototype="data.import_csv">
+            <port name="file" type="string" value="TA_BIRTHS_MALE_2008_2017.txt"/>
+        </node>
+        <node name="lookup1" position="-2.00,1.00" prototype="data.lookup">
+            <port name="key" type="string" value="NAAM"/>
+        </node>
+        <node name="lookup2" position="2.00,1.00" prototype="data.lookup">
+            <port name="key" type="string" value="AANTAL"/>
+        </node>
+        <node name="lookup3" position="21.00,1.00" prototype="data.lookup">
+            <port name="key" type="string" value="AANTAL"/>
+        </node>
+        <node name="lookup4" position="17.00,1.00" prototype="data.lookup">
+            <port name="key" type="string" value="NAAM"/>
+        </node>
+        <node name="multiply1" position="8.00,7.00" prototype="math.multiply"/>
+        <node name="multiply2" position="27.00,7.00" prototype="math.multiply"/>
+        <node name="range1" position="9.00,5.00" prototype="math.range"/>
+        <node name="range2" position="28.00,5.00" prototype="math.range"/>
+        <node name="rect1" position="2.00,3.00" prototype="corevector.rect">
+            <port name="width" type="float" value="20.0"/>
+            <port name="height" type="float" value="11.0"/>
+        </node>
+        <node name="rect2" position="21.00,3.00" prototype="corevector.rect">
+            <port name="width" type="float" value="20.0"/>
+            <port name="height" type="float" value="11.0"/>
+        </node>
+        <node name="resample1" position="13.00,3.00" prototype="corevector.resample">
+            <port name="method" type="string" value="amount"/>
+        </node>
+        <node name="resample2" position="32.00,3.00" prototype="corevector.resample">
+            <port name="method" type="string" value="amount"/>
+        </node>
+        <node name="rotate1" position="1.00,9.00" prototype="corevector.rotate"/>
+        <node name="rotate2" position="20.00,10.00" prototype="corevector.rotate"/>
+        <node name="slice1" position="2.00,-2.00" prototype="list.slice">
+            <port name="size" type="int" value="255"/>
+        </node>
+        <node name="slice2" position="21.00,-2.00" prototype="list.slice">
+            <port name="size" type="int" value="255"/>
+        </node>
+        <node name="textpath1" position="-2.00,3.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="18.0"/>
+            <port name="align" type="string" value="LEFT"/>
+            <port name="position" type="point" value="27.00,7.00"/>
+        </node>
+        <node name="textpath2" position="17.00,3.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="18.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+            <port name="position" type="point" value="-10.00,7.00"/>
+        </node>
+        <node name="translate1" position="1.00,11.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="-36.00,0.00"/>
+        </node>
+        <node name="translate2" position="20.00,11.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="-36.00,0.00"/>
+        </node>
+        <conn input="textpath1.text" output="lookup1"/>
+        <conn input="resample1.shape" output="ellipse1"/>
+        <conn input="resample1.points" output="count1"/>
+        <conn input="divide1.value2" output="count1"/>
+        <conn input="range1.end" output="count1"/>
+        <conn input="multiply1.value1" output="divide1"/>
+        <conn input="multiply1.value2" output="range1"/>
+        <conn input="rotate1.angle" output="multiply1"/>
+        <conn input="translate1.shape" output="rotate1"/>
+        <conn input="rect1.width" output="lookup2"/>
+        <conn input="lookup1.list" output="slice1"/>
+        <conn input="lookup2.list" output="slice1"/>
+        <conn input="count1.list" output="slice1"/>
+        <conn input="translate1.translate" output="resample1"/>
+        <conn input="compound1.shape1" output="align1"/>
+        <conn input="compound1.shape2" output="textpath1"/>
+        <conn input="slice1.list" output="import_csv1"/>
+        <conn input="textpath2.text" output="lookup4"/>
+        <conn input="resample2.shape" output="ellipse2"/>
+        <conn input="resample2.points" output="count2"/>
+        <conn input="divide2.value2" output="count2"/>
+        <conn input="range2.end" output="count2"/>
+        <conn input="multiply2.value1" output="divide2"/>
+        <conn input="multiply2.value2" output="range2"/>
+        <conn input="rotate2.angle" output="multiply2"/>
+        <conn input="translate2.shape" output="rotate2"/>
+        <conn input="rect2.width" output="lookup3"/>
+        <conn input="lookup4.list" output="slice2"/>
+        <conn input="lookup3.list" output="slice2"/>
+        <conn input="count2.list" output="slice2"/>
+        <conn input="translate2.translate" output="resample2"/>
+        <conn input="compound2.shape1" output="align2"/>
+        <conn input="compound2.shape2" output="textpath2"/>
+        <conn input="slice2.list" output="import_csv2"/>
+        <conn input="align2.shape" output="rect2"/>
+        <conn input="colorize1.shape" output="compound2"/>
+        <conn input="rotate2.shape" output="colorize1"/>
+        <conn input="align1.shape" output="rect1"/>
+        <conn input="colorize2.shape" output="compound1"/>
+        <conn input="rotate1.shape" output="colorize2"/>
+        <conn input="combine1.list1" output="translate1"/>
+        <conn input="combine1.list2" output="translate2"/>
+    </node>
+</ndbx>
